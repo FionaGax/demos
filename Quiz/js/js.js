@@ -465,7 +465,7 @@ function playAgain(){
 
     scoreBox.classList.add('hide');
     nameBox.classList.remove('hide');
-    generateRandomNumbers(); 
+    generateRandomNumbers();
     addQuestionsToArray();
 
 
