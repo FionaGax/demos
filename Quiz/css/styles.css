@@ -87,6 +87,12 @@ header {
     box-shadow: 0 0 50px var(--beige);
 }
 
+/* Style the radio button */
+.radio-button {
+    display: block;
+    margin: 10px auto;
+}
+
 /* Hide the confirm name div, this will be shown once the user hits the start button */
 .hide {
     display: none;
