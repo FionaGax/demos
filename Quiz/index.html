@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!-- All meta data goes here -->
+    <title>The Ultimate Harry Potter Quiz!</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="Fiona Gacquin">
+</head>
+
+
+    <body>
+
+        <header>
+            <h1>Do you have what it takes to be the ultimate Harry Potter fan?</h1>
+         </header>
+
+
+<!--        Create a div to hold the quiz-->
+        <div id="quiz-box">
+
+<!--            Use a div to create a dialog box. Give a custom class so all dialog boxes can be styled identically -->
+            <div class='dialog-box' id='name-box'>
+<!--                Ask for users name -->
+                <h2 id="ask-name">Hi, what is your name?</h2>
+
+<!--                Create the input box. Again give a custom class so styling will be identical -->
+                <label for="user-name">
+                    <input type="text" id="user-name" class="input-box" name="textArea" autocomplete="off">
+                </label>
+<!--                Create the start button. Give a custom class so all buttons will be styled identically -->
+                <button class="button" id="submit">Let's Start</button>
+
+            </div>
+
+<!--            Confirm the username. Use another div to hold this dialog box-->
+            <div class='dialog-box hide' id='confirm'>
+                <div>
+<!--                    The below h2 will be populated by javaScript-->
+                    <h2 id='confirm-name'></h2>
+
+                    <h2>Is this correct?</h2>
+                </div>
+<!--                    Create two buttons. One will confirm the name the second will reject it-->
+                <div>
+                    <button class="button" id="confirm-yes">Yes</button>
+                    <button class="button" id="confirm-no">No</button>
+                </div>
+            </div>
+
+<!--            Dialog box to hold all the questions-->
+            <div class='dialog-box hide' id="question-box">
+
+<!--                Display the number of the current question. Populate this with javaScript -->
+<!--                Create a custom class so the font will all be identical-->
+                <div id="question-number" class="question-font">
+
+                </div>
+
+<!--                Dislplay the question. Populate this with javaScript-->
+                <div id="question" class="question-font">
+
+                </div>
+
+<!--                The answer choices. Again, populate with javaScript -->
+                <div id="question-answers">
+
+                </div>
+
+<!--                Navigation buttons for previous and next -->
+                <div>
+                    <button class="button" id="prev">Prev</button>
+                    <button class="button" id="next">Next</button>
+                </div>
+
+            </div>
+
+<!--            Last message box where the score will be displayed-->
+            <div class='dialog-box hide' id='score'>
+                <div>
+<!--                    Populate the h2 tag with the result, use javaScript-->
+                    <h2 id='print-total'></h2>
+
+                </div>
+
+                <div>
+<!--                    Give the user an option to play again -->
+                    <button class="button" id="play-again">Play Again</button>
+                </div>
+            </div>
+<!--                  Print out the correct answers -->
+            <div class='dialog-box hide' id='correct-answers'>
+            </div>
+
+        </div>
+
+
+    <footer>
+
+<!--        Name, and email-->
+        <p>Fiona Gacquin | <a href="mailto:fionagacquin@live.co.uk">Contact</a></p>
+
+    </footer>
+
+    <script src="js/js.js"></script>
+
+    </body>
+
+</html>
