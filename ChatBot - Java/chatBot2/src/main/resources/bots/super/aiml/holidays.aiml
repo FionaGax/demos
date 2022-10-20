@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: holidays.aiml -->
+<!-- Author: Dr. Richard S. Wallace -->
+<!-- Last modified: May 07, 2022 -->
+<!--  -->
+<!-- This AIML file is part of the SUPER 0.0.4 chat bot knowledge base. -->
+<!--  -->
+<!-- The SUPER brain is Copyright &copy; 2022 by ALICE AI Foundation. -->
+<!--  -->
+<!-- The SUPER brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as published by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information see http://www.alicebot.org -->
+<category><pattern># HOLIDAYS</pattern>
+<template>Wonderful, do you know the places and dates you would like to go?</template>
+</category>
+<category><pattern># HOLIDAY</pattern>
+<template>Wonderful, do you know the places and dates you would like to go?</template>
+</category>
+<category><pattern>YES</pattern><that>WONDERFUL DO YOU KNOW THE PLACES AND DATES YOU WOULD LIKE TO GO</that>
+<template>Great, where would you like to go?</template>
+</category>
+<category><pattern>*</pattern><that>GREAT WHERE WOULD YOU LIKE TO GO</that>
+<template><think><set name="location1"><star/></set></think> Noted, what date will you visit?</template>
+</category>
+<category><pattern>*</pattern><that>NOTED WHAT DATE WILL YOU VISIT</that>
+<template><think><set name="date1"><star/></set></think> Noted, is there any other place?</template>
+</category>
+<category><pattern>YES</pattern><that>NOTED IS THERE ANY OTHER PLACE</that>
+<template>Great, where would you like to go?</template>
+</category>
+<category><pattern>NO</pattern><that>NOTED IS THERE ANY OTHER PLACE</that>
+<template>Just to confirm, you will visit:</template>
+</category>
+<category><pattern>YES</pattern><that>JUST TO CONFIRM YOU WILL VISIT</that>
+<template>Give me a second while I prepare your wardrobe</template>
+</category>
+<category><pattern>NO</pattern><that>WONDERFUL DO YOU KNOW THE PLACES AND DATES YOU WOULD LIKE TO GO</that>
+<template>Well, I am afraid there is nothing I can help!</template>
+</category>
+<category><pattern># FALSE</pattern>
+<template>Sorry, That is not a valid city</template>
+</category>
+<category><pattern>THE DATE IS *</pattern>
+<template><think><set name="date"> <star/></set></think>
+<condition name="date">
+<li value="**/**/***">Correct Format</li>
+<li value="*/*/**">Incorrect Format</li>
+<li value="*">Nah marico</li>
+<li>Try again because the format is not correct</li>
+</condition></template>
+</category>
+</aiml>

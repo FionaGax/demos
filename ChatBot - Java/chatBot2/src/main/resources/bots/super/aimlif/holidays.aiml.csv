@@ -1,0 +1,11 @@
+0,# HOLIDAYS,*,*,Wonderful#Comma do you know the places and dates you would like to go?,holidays.aiml
+0,# HOLIDAY,*,*,Wonderful#Comma do you know the places and dates you would like to go?,holidays.aiml
+0,YES,WONDERFUL DO YOU KNOW THE PLACES AND DATES YOU WOULD LIKE TO GO,*,Great#Comma where would you like to go?,holidays.aiml
+0,*,GREAT WHERE WOULD YOU LIKE TO GO,*,<think><set name="location1"><star/></set></think> Noted#Comma what date will you visit?,holidays.aiml
+0,*,NOTED WHAT DATE WILL YOU VISIT,*,<think><set name="date1"><star/></set></think> Noted#Comma is there any other place?,holidays.aiml
+0,YES,NOTED IS THERE ANY OTHER PLACE,*,Great#Comma where would you like to go?,holidays.aiml
+0,NO,NOTED IS THERE ANY OTHER PLACE,*,Just to confirm#Comma you will visit:,holidays.aiml
+0,YES,JUST TO CONFIRM YOU WILL VISIT,*,Give me a second while I prepare your wardrobe,holidays.aiml
+0,NO,WONDERFUL DO YOU KNOW THE PLACES AND DATES YOU WOULD LIKE TO GO,*,Well#Comma I am afraid there is nothing I can help!,holidays.aiml
+0,# FALSE,*,*,Sorry#Comma That is not a valid city,holidays.aiml
+0,THE DATE IS *,*,*,<think><set name="date"> <star/></set></think>#Newline<condition name="date">#Newline<li value="**/**/***">Correct Format</li>#Newline<li value="*/*/**">Incorrect Format</li>#Newline<li value="*">Nah marico</li>#Newline<li>Try again because the format is not correct</li>#Newline</condition>,holidays.aiml
